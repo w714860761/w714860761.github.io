@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-12T15:41:50.303Z</updated>
+  <updated>2020-06-13T10:48:01.497Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建个人博客(一)：Hexo本地的使用和配置</title>
+    <link href="http://yoursite.com/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/</id>
+    <published>2020-06-13T10:41:25.108Z</published>
+    <updated>2020-06-13T10:48:01.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近突然想搭建自己的个人博客，刚完成，准备吧过程分享给大家，包括主题的修改等，废话不多说了</p><p>上效果:<a href="https://w714860761.github.io/" target="_blank" rel="noopener">溯</a></p><h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="1-了解Hexo"><a href="#1-了解Hexo" class="headerlink" title="1. 了解Hexo"></a>1. 了解Hexo</h4><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p><h4 id="2-git版本控制工具"><a href="#2-git版本控制工具" class="headerlink" title="2. git版本控制工具"></a>2. git版本控制工具</h4><p>Git是一个免费的、开源的版本控制软件。在Windows上安装git，一般为msysgit，<br>官方下载地址 :<a href="http://code.google.com/p/msysgit/downloads/list" target="_blank" rel="noopener">http://code.google.com/p/msysgit/downloads/list</a><br>安装步骤下一步即可……</p><h4 id="3-Node-js环境"><a href="#3-Node-js环境" class="headerlink" title="3. Node.js环境"></a>3. Node.js环境</h4><p>简单的说 Node.js 就是运行在服务端的 JavaScript。<br>nodejs官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a><br>注意:选择LTS版本安装，直接全部点击下一步就行</p><h3 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h3><p>配置好环境变量后（默认大家都不是新手了哈，如果还是不知道，百度…）<br>打开cmd<br>输入 node -v  (检查版本)<br>输入npm -v (检查版本）<br>输入 git –version  （检查git版本，目的是为了看有没有安装成功git）</p><p><img src="https://img-blog.csdnimg.cn/20200613175959722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>如上表示环境变量配置成功</strong></p><h3 id="三、本地配置Hexo环境"><a href="#三、本地配置Hexo环境" class="headerlink" title="三、本地配置Hexo环境"></a>三、本地配置Hexo环境</h3><p>常用hexo命令:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo init <span class="comment">//初始化hexo博客</span></span><br><span class="line">hexo clean <span class="comment">//清除缓存 网页正常情况下可以忽略此条命令</span></span><br><span class="line">hexo g <span class="comment">//生成静态网页</span></span><br><span class="line">hexo d <span class="comment">//开始部署</span></span><br><span class="line">hexo s <span class="comment">//启动本地服务器</span></span><br><span class="line">npm install -g hexo-cli <span class="comment">//hexo的安装</span></span><br></pre></td></tr></table></figure><p>在你的目录下建立文件夹(建议取名blog，必须为空)，右键选择git bash here打开git，如下图:</p><p><img src="https://img-blog.csdnimg.cn/20200613180800467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt=""></p><p>在打开的终端窗口中输入“npm install -g hexo-cli”来进行hexo的安装，安装成功后如下图:</p><p><img src="https://img-blog.csdnimg.cn/20200613181235895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>继续输入”hexo init”进行博客初始化，从github地址克隆项目，成功后如下图，多等一会:</p><p><img src="https://img-blog.csdnimg.cn/20200613181821982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>之后分别键入”hexo g”和”hexo s”，如下图</p><p><img src="https://img-blog.csdnimg.cn/20200613181932947.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>至此，进入本地浏览器输入:<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>就可以查看博客了，如下</p><p><img src="https://img-blog.csdnimg.cn/20200613182044836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>激动人心！</strong><br>Ctrl+C:停止服务器<br>下一节讲解配置hexo的主题，让你的博客更加的美观</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近突然想搭建自己的个人博客，刚完成，准备吧过程分享给大家，包括主题的修改等，废话不多说了&lt;/p&gt;
+&lt;p&gt;上效果:&lt;a href=&quot;https://w714860761.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;溯&lt;/a&gt;&lt;/p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>一个可视化的java程序解析XML文档（存储学生信息数据）</title>

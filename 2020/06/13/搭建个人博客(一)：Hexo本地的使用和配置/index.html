@@ -17,21 +17,28 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>JavaSE学习笔记(三):基本数据类型 | 溯</title>
-  <meta name="description" content="基本数据类型在程序设计中经常用到一系列类型，它们需要特殊对待。可以把它们想象成“基本”类型。之所以特殊对待，是因为对于特别小的、简单的变量，往往用new来创建对象不是很有效的。因此，对于这些类型，Java采取与C和C++相同的方法，可以不用new来创建对象，例如：int a&#x3D;15。一、整数:  byte:表示整数，最小的整数类型，包装器为Byte short:也表示整数，但是表示范围更大，占两个字">
+  <title>搭建个人博客(一)：Hexo本地的使用和配置 | 溯</title>
+  <meta name="description" content="最近突然想搭建自己的个人博客，刚完成，准备吧过程分享给大家，包括主题的修改等，废话不多说了 上效果:溯 一、准备工作1. 了解HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 2. git版本控制工具Git是一个免费的、开源的版本控制软件。在Windows上安装git，一般为msysgit，官">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaSE学习笔记(三):基本数据类型">
-<meta property="og:url" content="http://yoursite.com/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:title" content="搭建个人博客(一)：Hexo本地的使用和配置">
+<meta property="og:url" content="http://yoursite.com/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="基本数据类型在程序设计中经常用到一系列类型，它们需要特殊对待。可以把它们想象成“基本”类型。之所以特殊对待，是因为对于特别小的、简单的变量，往往用new来创建对象不是很有效的。因此，对于这些类型，Java采取与C和C++相同的方法，可以不用new来创建对象，例如：int a&#x3D;15。一、整数:  byte:表示整数，最小的整数类型，包装器为Byte short:也表示整数，但是表示范围更大，占两个字">
+<meta property="og:description" content="最近突然想搭建自己的个人博客，刚完成，准备吧过程分享给大家，包括主题的修改等，废话不多说了 上效果:溯 一、准备工作1. 了解HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 2. git版本控制工具Git是一个免费的、开源的版本控制软件。在Windows上安装git，一般为msysgit，官">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-12T15:38:43.355Z">
-<meta property="article:modified_time" content="2020-06-13T02:34:10.802Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200613175959722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200613180800467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200613181235895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200613181821982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200613181932947.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200613182044836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-06-13T10:41:25.108Z">
+<meta property="article:modified_time" content="2020-06-13T10:48:01.497Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200613175959722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+  <link rel="canonical" href="http://yoursite.com/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -326,14 +333,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-JavaSE学习笔记(三)-基本数据类型" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-搭建个人博客(一)：Hexo本地的使用和配置" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      JavaSE学习笔记(三):基本数据类型
+      搭建个人博客(一)：Hexo本地的使用和配置
     </h1>
   
 
@@ -341,20 +348,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
-	  <time datetime="2020-06-12T15:38:43.355Z" itemprop="datePublished">2020-06-12</time>
+	<a href="/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/" class="article-date">
+	  <time datetime="2020-06-13T10:41:25.108Z" itemprop="datePublished">2020-06-13</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/Java/">Java</a>
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Java/" rel="tag">Java</a>
+	<a class="article-tag-link" href="/tags/Hexo/" rel="tag">Hexo</a>
   </span>
 
 
@@ -367,10 +374,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 389(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 531(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -380,30 +387,28 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><p>在程序设计中经常用到一系列类型，它们需要特殊对待。可以把它们想象成“基本”类型。之所以特殊对待，是因为对于特别小的、简单的变量，往往用new来创建对象不是很有效的。因此，对于这些类型，Java采取与C和C++相同的方法，可以不用new来创建对象，例如：int a=15。<br><strong>一、整数:</strong></p>
-<ol>
-<li>byte:表示整数，最小的整数类型，包装器为Byte</li>
-<li>short:也表示整数，但是表示范围更大，占两个字节(一字节=8-bit)，包装器为Short</li>
-<li>int:常用的整数表达类型，占4个字节，包装器为Integer</li>
-<li>long:最大的整数类型，占8个字节，包装器为Long</li>
-</ol>
-<p><strong>二、浮点数:</strong></p>
-<ol>
-<li>float:表示浮点数(小数)类型，占4个字节，包装器为Float</li>
-<li>double:可以表示最大的浮点数类型，占8个字节，包装器为Double</li>
-</ol>
-<p><strong>三、字符:</strong></p>
-<ol>
-<li>char:字符表示类型，一个char可以存储一个字符，占2字节，包装器为Character</li>
-</ol>
-<p><strong>四、布尔类型:</strong></p>
-<ol>
-<li>boolean类型所占存储空间的大小没有明确指定，仅定义为能够取字面值true或false，包装器为Boolean</li>
-</ol>
-<p><strong>五、数据类型：void:</strong></p>
-<ol>
-<li>Java语言是强类型（Strong typed）的，从方法申明的语法可以看出方法的定义必须有返回值，而void就是空，在方法申明的时候表示该方法没有返回值。在此，你只需要知道，void是空类型</li>
-</ol>
+        <p>最近突然想搭建自己的个人博客，刚完成，准备吧过程分享给大家，包括主题的修改等，废话不多说了</p>
+<p>上效果:<a href="https://w714860761.github.io/" target="_blank" rel="noopener">溯</a></p>
+<h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="1-了解Hexo"><a href="#1-了解Hexo" class="headerlink" title="1. 了解Hexo"></a>1. 了解Hexo</h4><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h4 id="2-git版本控制工具"><a href="#2-git版本控制工具" class="headerlink" title="2. git版本控制工具"></a>2. git版本控制工具</h4><p>Git是一个免费的、开源的版本控制软件。在Windows上安装git，一般为msysgit，<br>官方下载地址 :<a href="http://code.google.com/p/msysgit/downloads/list" target="_blank" rel="noopener">http://code.google.com/p/msysgit/downloads/list</a><br>安装步骤下一步即可……</p>
+<h4 id="3-Node-js环境"><a href="#3-Node-js环境" class="headerlink" title="3. Node.js环境"></a>3. Node.js环境</h4><p>简单的说 Node.js 就是运行在服务端的 JavaScript。<br>nodejs官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a><br>注意:选择LTS版本安装，直接全部点击下一步就行</p>
+<h3 id="二、配置环境变量"><a href="#二、配置环境变量" class="headerlink" title="二、配置环境变量"></a>二、配置环境变量</h3><p>配置好环境变量后（默认大家都不是新手了哈，如果还是不知道，百度…）<br>打开cmd<br>输入 node -v  (检查版本)<br>输入npm -v (检查版本）<br>输入 git –version  （检查git版本，目的是为了看有没有安装成功git）</p>
+<p><img src="https://img-blog.csdnimg.cn/20200613175959722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>如上表示环境变量配置成功</strong></p>
+<h3 id="三、本地配置Hexo环境"><a href="#三、本地配置Hexo环境" class="headerlink" title="三、本地配置Hexo环境"></a>三、本地配置Hexo环境</h3><p>常用hexo命令:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo init <span class="comment">//初始化hexo博客</span></span><br><span class="line">hexo clean <span class="comment">//清除缓存 网页正常情况下可以忽略此条命令</span></span><br><span class="line">hexo g <span class="comment">//生成静态网页</span></span><br><span class="line">hexo d <span class="comment">//开始部署</span></span><br><span class="line">hexo s <span class="comment">//启动本地服务器</span></span><br><span class="line">npm install -g hexo-cli <span class="comment">//hexo的安装</span></span><br></pre></td></tr></table></figure>
+
+<p>在你的目录下建立文件夹(建议取名blog，必须为空)，右键选择git bash here打开git，如下图:</p>
+<p><img src="https://img-blog.csdnimg.cn/20200613180800467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt=""></p>
+<p>在打开的终端窗口中输入“npm install -g hexo-cli”来进行hexo的安装，安装成功后如下图:</p>
+<p><img src="https://img-blog.csdnimg.cn/20200613181235895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>继续输入”hexo init”进行博客初始化，从github地址克隆项目，成功后如下图，多等一会:</p>
+<p><img src="https://img-blog.csdnimg.cn/20200613181821982.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>之后分别键入”hexo g”和”hexo s”，如下图</p>
+<p><img src="https://img-blog.csdnimg.cn/20200613181932947.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>至此，进入本地浏览器输入:<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>就可以查看博客了，如下</p>
+<p><img src="https://img-blog.csdnimg.cn/20200613182044836.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>激动人心！</strong><br>Ctrl+C:停止服务器<br>下一节讲解配置hexo的主题，让你的博客更加的美观</p>
 
       
     </div>
@@ -413,7 +418,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="JavaSE学习笔记(三):基本数据类型" target="_blank" rel="external">http://yoursite.com/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%89)-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
+      <a href="http://yoursite.com/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/" title="搭建个人博客(一)：Hexo本地的使用和配置" target="_blank" rel="external">http://yoursite.com/2020/06/13/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)%EF%BC%9AHexo%E6%9C%AC%E5%9C%B0%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -459,13 +464,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2020/06/12/%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84java%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%9E%90XML%E6%96%87%E6%A1%A3/" title="一个可视化的java程序解析XML文档（存储学生信息数据）"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)-%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E7%AE%80%E5%8D%95%E7%9A%84Java%E7%A8%8B%E5%BA%8F/" title="JavaSE学习笔记(二):命令行编译简单的Java程序：Hello World"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/06/12/%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84java%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%9E%90XML%E6%96%87%E6%A1%A3/" title="一个可视化的java程序解析XML文档（存储学生信息数据）"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
