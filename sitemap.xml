@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/12/%E5%AF%B9Spring%E7%9A%84JDBC%E6%A1%86%E6%9E%B6%E5%86%8D%E5%B0%81%E8%A3%85/</loc>
+    
+    <lastmod>2020-06-13T20:07:35.515Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/12/Spring%E9%85%8D%E7%BD%AE-%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F/</loc>
+    
+    <lastmod>2020-06-13T20:07:20.666Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/12/JavaSE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)-%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E7%AE%80%E5%8D%95%E7%9A%84Java%E7%A8%8B%E5%BA%8F/</loc>
     
     <lastmod>2020-06-13T11:38:55.484Z</lastmod>
@@ -40,20 +54,6 @@
     <loc>http://yoursite.com/2020/06/12/%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84java%E7%A8%8B%E5%BA%8F%E8%A7%A3%E6%9E%90XML%E6%96%87%E6%A1%A3/</loc>
     
     <lastmod>2020-06-13T11:38:15.931Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/12/Spring%E9%85%8D%E7%BD%AE-%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F/</loc>
-    
-    <lastmod>2020-06-13T11:36:35.346Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/12/%E5%AF%B9Spring%E7%9A%84JDBC%E6%A1%86%E6%9E%B6%E5%86%8D%E5%B0%81%E8%A3%85/</loc>
-    
-    <lastmod>2020-06-13T11:36:23.049Z</lastmod>
     
   </url>
   
