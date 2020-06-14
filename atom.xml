@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-14T09:46:04.108Z</updated>
+  <updated>2020-06-14T09:45:53.669Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>使用gitee导入github项目，解决github下载速度缓慢</title>
-    <link href="http://yoursite.com/2020/06/14/GithubSlow/"/>
-    <id>http://yoursite.com/2020/06/14/GithubSlow/</id>
-    <published>2020-06-13T16:00:00.000Z</published>
-    <updated>2020-06-14T09:46:04.108Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="使用gitee导入github项目，解决github下载速度缓慢的问题"><a href="#使用gitee导入github项目，解决github下载速度缓慢的问题" class="headerlink" title="使用gitee导入github项目，解决github下载速度缓慢的问题"></a>使用gitee导入github项目，解决github下载速度缓慢的问题</h3><p><strong>一、注册gitee账号:</strong></p><p>gitee官网：<a href="https://gitee.com/" target="_blank" rel="noopener">https://gitee.com/</a><br>进入官网点击右上角注册账号</p><p><strong>二、导入github项目:</strong></p><p>点击右上角的加号：<br><img src="https://img-blog.csdnimg.cn/20200614160720220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择  从Github/GitLab导入仓库：<br><img src="https://img-blog.csdnimg.cn/20200614155804436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入github项目的仓库地址，然后下滑点击导入按钮即可：<br><img src="https://img-blog.csdnimg.cn/20200614155948592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>和github一样，打开仓库进行下载，这时候已经是国内的下载速度了</p><p><strong>Finish</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;使用gitee导入github项目，解决github下载速度缓慢的问题&quot;&gt;&lt;a href=&quot;#使用gitee导入github项目，解决github下载速度缓慢的问题&quot; class=&quot;headerlink&quot; title=&quot;使用gitee导入github项目，解决gi
-      
-    
-    </summary>
-    
-    
-      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-  </entry>
   
   <entry>
     <title>搭建个人博客(四)：上传Hexo博客至github</title>
@@ -65,6 +39,32 @@
     
     
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用gitee导入github项目，解决github下载速度缓慢</title>
+    <link href="http://yoursite.com/2020/06/14/GithubSlow/"/>
+    <id>http://yoursite.com/2020/06/14/GithubSlow/</id>
+    <published>2020-06-13T16:00:00.000Z</published>
+    <updated>2020-06-14T09:58:53.725Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="使用gitee导入github项目，解决github下载速度缓慢的问题"><a href="#使用gitee导入github项目，解决github下载速度缓慢的问题" class="headerlink" title="使用gitee导入github项目，解决github下载速度缓慢的问题"></a>使用gitee导入github项目，解决github下载速度缓慢的问题</h3><p><strong>一、注册gitee账号:</strong></p><p>gitee官网：<a href="https://gitee.com/" target="_blank" rel="noopener">https://gitee.com/</a><br>进入官网点击右上角注册账号</p><p><strong>二、导入github项目:</strong></p><p>点击右上角的加号：<br><img src="https://img-blog.csdnimg.cn/20200614160720220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择  从Github/GitLab导入仓库：<br><img src="https://img-blog.csdnimg.cn/20200614155804436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>输入github项目的仓库地址，然后下滑点击导入按钮即可：<br><img src="https://img-blog.csdnimg.cn/20200614155948592.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>和github一样，打开仓库进行下载，这时候已经是国内的下载速度了</p><p><strong>Finish</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;使用gitee导入github项目，解决github下载速度缓慢的问题&quot;&gt;&lt;a href=&quot;#使用gitee导入github项目，解决github下载速度缓慢的问题&quot; class=&quot;headerlink&quot; title=&quot;使用gitee导入github项目，解决gi
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
     
   </entry>
   
