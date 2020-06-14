@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>搭建个人博客(二)：Hexo主题pure使用指南 | 溯</title>
+  <meta name="description" content="Hexo-theme-pures是一个Hexo的主题框架效果查看:溯的主页 一、使用pure主题pure主题地址:https:&#x2F;&#x2F;github.com&#x2F;cofess&#x2F;hexo-theme-pure.git themes&#x2F;pure 在你的博客根目录下右击选择git bash here命令行窗口输入如下命令 1、克隆pure到本地：1git clone https:&#x2F;&#x2F;github.com&#x2F;cofes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建个人博客(二)：Hexo主题pure使用指南">
+<meta property="og:url" content="http://yoursite.com/2020/06/14/HexoTwo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo-theme-pures是一个Hexo的主题框架效果查看:溯的主页 一、使用pure主题pure主题地址:https:&#x2F;&#x2F;github.com&#x2F;cofess&#x2F;hexo-theme-pure.git themes&#x2F;pure 在你的博客根目录下右击选择git bash here命令行窗口输入如下命令 1、克隆pure到本地：1git clone https:&#x2F;&#x2F;github.com&#x2F;cofes">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200614142355807.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200614143620580.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-06-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-06-14T09:45:17.794Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200614142355807.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/2020/06/14/HexoTwo/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/icon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/w714860761" target="_blank">
+          <img class="img-circle img-rotate" src="/images/head.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">溯</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">代码改变世界</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> 重庆,中国</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/w714860761" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/6212101714/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://user.qzone.qq.com/714860761" target="_blank" title="Qq" data-toggle=tooltip data-placement=top><i class="icon icon-qq"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 13.67px;">Hexo</a> <a href="/tags/Java/" style="font-size: 14px;">Java</a> <a href="/tags/Spring/" style="font-size: 13.33px;">Spring</a> <a href="/tags/github/" style="font-size: 13px;">github</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/06/14/GithubSlow/" class="title">使用gitee导入github项目，解决github下载速度缓慢</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-13T16:00:00.000Z" itemprop="datePublished">2020-06-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/06/14/HexoFour/" class="title">搭建个人博客(四)：上传Hexo博客至github</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-13T16:00:00.000Z" itemprop="datePublished">2020-06-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/06/14/HexoThree/" class="title">搭建个人博客(三)：Hexo-theme-pure个人博客中博文上传以及分类和标签的设定</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-13T16:00:00.000Z" itemprop="datePublished">2020-06-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/06/14/HexoTwo/" class="title">搭建个人博客(二)：Hexo主题pure使用指南</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-13T16:00:00.000Z" itemprop="datePublished">2020-06-14</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+              </p>
+              <p class="item-title">
+                <a href="/2020/06/13/HexoOne/" class="title">搭建个人博客(一)：Hexo本地的使用和配置</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2020-06-12T16:00:00.000Z" itemprop="datePublished">2020-06-13</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-HexoTwo" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搭建个人博客(二)：Hexo主题pure使用指南
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2020/06/14/HexoTwo/" class="article-date">
+	  <time datetime="2020-06-13T16:00:00.000Z" itemprop="datePublished">2020-06-14</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/06/14/HexoTwo/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.4k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p><strong>Hexo-theme-pures是一个Hexo的主题框架</strong><br><strong>效果查看</strong>:<a href="https://w714860761.github.io/" target="_blank" rel="noopener">溯的主页</a></p>
+<h2 id="一、使用pure主题"><a href="#一、使用pure主题" class="headerlink" title="一、使用pure主题"></a>一、使用pure主题</h2><p>pure主题地址:<a href="https://github.com/cofess/hexo-theme-pure.git%20themes/pure" target="_blank" rel="noopener">https://github.com/cofess/hexo-theme-pure.git themes/pure</a></p>
+<p>在你的博客根目录下右击选择git bash here命令行窗口输入如下命令</p>
+<h5 id="1、克隆pure到本地："><a href="#1、克隆pure到本地：" class="headerlink" title="1、克隆pure到本地："></a>1、克隆pure到本地：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/cofess/hexo-theme-pure.git themes/pure</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意</em></strong>:如果github下载慢，建议使用gitee导入pure的girthub仓库，然后进行下载，具体操作请查看：<a href="https://blog.csdn.net/qq_42983502/article/details/106747098" target="_blank" rel="noopener">使用gitee导入github项目，解决github下载速度缓慢</a><br>如果使用gitee下载，请解压至博客文件夹下的themes目录下<br>下载后 如下图:<br><img src="https://img-blog.csdnimg.cn/20200614142355807.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="2、启用pure主题"><a href="#2、启用pure主题" class="headerlink" title="2、启用pure主题:"></a>2、启用pure主题:</h5><p><strong>配置文件说明:</strong><br>在 Hexo 中主要有两份配置文件，其名称都是 _config.yml。 一份位于博客根目录下，主要包含 Hexo 本身的配置；另一份位于主题根目录下，主要用于配置主题相关的选项。<br><strong>（1）打开博客配置文件_config.yml，做如下修改:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN //设置主题为中文版，若使用英文版则不修改</span><br><span class="line">theme: hexo-theme-pure //修改hexo主题</span><br></pre></td></tr></table></figure>
+<p><strong>（2）在博客文件夹下打开git bash命令行窗口依次使用如下指令:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>启动服务后：进入本地浏览器输入:<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>，如下图<br><img src="https://img-blog.csdnimg.cn/20200614143620580.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="3、安装pure插件"><a href="#3、安装pure插件" class="headerlink" title="3、安装pure插件:"></a>3、安装pure插件:</h5><p>在博客文件夹下打开git bash命令行窗口依次使用如下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br><span class="line">npm install hexo-generator-json-content --save</span><br><span class="line">npm install hexo-generator-feed --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、配置pure主题"><a href="#二、配置pure主题" class="headerlink" title="二、配置pure主题"></a>二、配置pure主题</h2><h5 id="1、主题的基本配置："><a href="#1、主题的基本配置：" class="headerlink" title="1、主题的基本配置："></a>1、主题的基本配置：</h5><p>将主题目录中 /theme/_source/ 下的所有东西复制进博客根目录的source文件夹中<br><strong><em>注意:</em></strong> 看清楚是哪个目录</p>
+<h5 id="2、个人信息的配置："><a href="#2、个人信息的配置：" class="headerlink" title="2、个人信息的配置："></a>2、个人信息的配置：</h5><p>打开主题根目录下的_config.yml配置文件：</p>
+<p><strong>（1）配置站点左边的主目录:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># menu</span></span><br><span class="line">menu:</span><br><span class="line">  Home: .</span><br><span class="line">  Archives: archives  <span class="comment"># 归档</span></span><br><span class="line">  <span class="comment"># categories指代博客根目录的source下的categories文件夹,可进行相关配置,下同</span></span><br><span class="line">  Categories: categories  <span class="comment"># 分类</span></span><br><span class="line">  Tags: tags  <span class="comment"># 标签</span></span><br><span class="line">  Repository: repository  <span class="comment"># github repositories</span></span><br><span class="line">  Books: books  <span class="comment"># 豆瓣书单</span></span><br><span class="line">  Links: links  <span class="comment"># 友链</span></span><br><span class="line">  About: about  <span class="comment"># 关于</span></span><br></pre></td></tr></table></figure>
+<p>单个目录界面的相关配置可在博客根目录的source下的同名文件夹中进行配置</p>
+<p><strong>（2）配置站点标题:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">site:</span><br><span class="line">  logo:</span><br><span class="line">    enabled: <span class="literal">true</span></span><br><span class="line">    width: 40</span><br><span class="line">    height: 40</span><br><span class="line">    url: ../images/logo.png</span><br><span class="line">  title: Hexo <span class="comment"># 页面title</span></span><br><span class="line">  favicon: /favicon.png <span class="comment"># 页面icon</span></span><br><span class="line">  board: &lt;p&gt;欢迎交流与分享经验!&lt;/p&gt; <span class="comment"># 站点公告</span></span><br><span class="line">  copyright: <span class="literal">false</span> <span class="comment"># 底部版权信息,使用true开启</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）配置打赏信息:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Donate</span></span><br><span class="line">donate:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 微信打赏</span></span><br><span class="line">  wechatpay:</span><br><span class="line">    qrcode: images/donate/wechatpayimg.png <span class="comment"># 在主题目录的source文件夹中进行图片的设定</span></span><br><span class="line">    title: 微信支付</span><br><span class="line">  <span class="comment"># 支付宝打赏</span></span><br><span class="line">  alipay: </span><br><span class="line">    qrcode: images/donate/alipayimg.png <span class="comment"># 在主题目录的source文件夹中进行图片的设定</span></span><br><span class="line">    title: 支付宝</span><br></pre></td></tr></table></figure>
+
+<p><strong>（4）配置个人信息:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># profile</span></span><br><span class="line">profile:</span><br><span class="line">  enabled: <span class="literal">true</span> <span class="comment"># 是否展示个人信息</span></span><br><span class="line">  avatar: images/avatar.jpg <span class="comment"># 在主题目录的source文件夹中进行图片的设定</span></span><br><span class="line">  gravatar: <span class="comment"># Gravatar email address, if you enable Gravatar, your avatar config will be overriden</span></span><br><span class="line">  author: 昵称</span><br><span class="line">  author_title: Web Developer &amp; Designer</span><br><span class="line">  author_description: 个人简介。</span><br><span class="line">  location: Shenzhen, China </span><br><span class="line">  follow: https://github.com/cofess</span><br><span class="line">  <span class="comment"># Social Links</span></span><br><span class="line">  social:</span><br><span class="line">    links: <span class="comment"># 左边目录底部的链接配置，可自行删减</span></span><br><span class="line">      github: https://github.com/cofess</span><br><span class="line">      weibo: http://weibo.com/cofess</span><br><span class="line">      twitter: https://twitter.com/iwebued</span><br><span class="line">      <span class="comment"># facebook: /</span></span><br><span class="line">      <span class="comment"># dribbble: /</span></span><br><span class="line">      behance: https://www.behance.net/cofess</span><br><span class="line">      rss: atom.xml</span><br><span class="line">    link_tooltip: <span class="literal">true</span> <span class="comment"># enable the social link tooltip, options: true, false</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（5）配置about界面右栏目中的信息:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># My Skills </span></span><br><span class="line">skills:</span><br><span class="line">  Git: ★★★☆☆</span><br><span class="line">  Gulp: ★★★☆☆</span><br><span class="line">  Javascript: ★★★☆☆</span><br><span class="line">  HTML+CSS: ★★★☆☆</span><br><span class="line">  Bootstrap: ★★★☆☆</span><br><span class="line">  ThinkPHP: ★★★☆☆</span><br><span class="line">  平面设计: ★★★☆☆</span><br><span class="line"><span class="comment"># My Personal Links</span></span><br><span class="line">links:</span><br><span class="line">  Github: https://github.com/cofess</span><br><span class="line">  Blog: http://blog.cofess.com</span><br><span class="line">  微博: http://weibo.com/cofess</span><br><span class="line">  花瓣: http://huaban.com/cofess</span><br><span class="line">  Behance: https://www.behance.net/cofess</span><br><span class="line"><span class="comment"># My Personal Labels</span></span><br><span class="line">labels:</span><br><span class="line">  - 前端</span><br><span class="line">  - 前端开发</span><br><span class="line">  - 前端重构</span><br><span class="line">  - Web前端</span><br><span class="line">  - 网页重构</span><br><span class="line"><span class="comment"># My Personal Works</span></span><br><span class="line">works:</span><br><span class="line">  name:</span><br><span class="line">    link: http://www.example.com</span><br><span class="line">    date: 2016</span><br></pre></td></tr></table></figure>
+
+<p><strong>（6）开启评论功能:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">  <span class="built_in">type</span>: valine  <span class="comment"># 启用哪种评论系统</span></span><br></pre></td></tr></table></figure>
+<p><em>Valine</em><br>一个无后端的评论框工具，其依赖于 Leancloud 开发，所以使用前需要先注册 Leancloud 账号<br><em>Valine配置</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">valine: <span class="comment"># Valine官方地址: https://valine.js.org</span></span><br><span class="line">  appid:  <span class="comment"># 你的 leancloud 应用 appid</span></span><br><span class="line">  appkey:  <span class="comment"># 你的 leancloud 应用 appkey</span></span><br><span class="line">  notify: <span class="literal">true</span> <span class="comment"># 是否开始评论邮件提醒, 教程: https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># 是否开始验证码功能, 开始邮件提醒会自动开启验证码功能</span></span><br><span class="line">  placeholder: 说点什么... <span class="comment"># 输入框默认内容</span></span><br><span class="line">  avatar: mm <span class="comment"># 头像展示方式, 具体设置项教程: https://valine.js.org/configuration.html#avatar</span></span><br><span class="line">  meta: nick,mail,link <span class="comment"># 自定义评论信息</span></span><br><span class="line">  pageSize: 10 <span class="comment"># 评论列表分页</span></span><br><span class="line">  lang: zh-cn, <span class="comment"># 多语言支持 zh-cn | en</span></span><br><span class="line">  visitor: <span class="literal">true</span> <span class="comment"># 文章阅读量统计:  https://valine.js.org/visitor.html</span></span><br><span class="line">  highlight: <span class="literal">true</span> <span class="comment"># 代码高亮</span></span><br><span class="line">  recordIP: <span class="literal">true</span> <span class="comment"># 记录评论者的IP</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（7）开启搜索功能:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Search</span></span><br><span class="line">search:</span><br><span class="line">  insight: <span class="literal">true</span> <span class="comment"># 内置搜索功能,</span></span><br><span class="line">  baidu: <span class="literal">false</span> <span class="comment"># 百度搜索功能,不可以同时使用</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（8）展示github项目:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Github</span></span><br><span class="line">github: </span><br><span class="line">  username: cofess  <span class="comment"># github用户名</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（9）开启文章字数，阅读时长，浏览量统计:</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># PV</span></span><br><span class="line">pv: <span class="comment"># 浏览量统计</span></span><br><span class="line">  busuanzi:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">false</span>  <span class="comment"># 不蒜子统计，一般使用不蒜子统计，使用true开启</span></span><br><span class="line">  leancloud:</span><br><span class="line">    <span class="built_in">enable</span>: <span class="literal">false</span>  <span class="comment"># leancloud统计</span></span><br><span class="line">    app_id: <span class="comment"># leancloud &lt;AppID&gt;</span></span><br><span class="line">    app_key: <span class="comment"># leancloud &lt;AppKey&gt;</span></span><br><span class="line">        </span><br><span class="line"><span class="comment"># wordcount</span></span><br><span class="line">postCount:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></span><br><span class="line">  wordcount: <span class="literal">true</span>  <span class="comment"># 文章字数统计</span></span><br><span class="line">  min2read: <span class="literal">true</span>  <span class="comment"># 阅读时长预计</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（10）友情链接的配置:</strong></p>
+<p>选择博客根目录下 /source/_data/ 中的links.yml配置文件，可仿照其中样例进行配置</p>
+<p><strong>（11）分类和标签的配置:</strong></p>
+<h2 id="三、更新站点，查看效果"><a href="#三、更新站点，查看效果" class="headerlink" title="三、更新站点，查看效果"></a>三、更新站点，查看效果</h2><p>在博客文件夹下打开git bash命令行窗口依次使用如下指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>启动服务后：进入本地浏览器输入:<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 进行查看</p>
+<p>记得当初思考怎么配置分类和标签时候，纠结了很久，反复的看配置文件，最后发现分类和标签的配置需在博文中设置，在下一节讲解：<a href="https://blog.csdn.net/qq_42983502/article/details/106747530" target="_blank" rel="noopener">下一节</a></p>
+<p><strong>Finish</strong></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://yoursite.com/2020/06/14/HexoTwo/" title="搭建个人博客(二)：Hexo主题pure使用指南" target="_blank" rel="external">http://yoursite.com/2020/06/14/HexoTwo/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/w714860761" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/head.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/w714860761" target="_blank"><span class="text-dark">溯</span><small class="ml-1x">代码改变世界</small></a></h3>
+        <div>一个95后大学生</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2020/06/14/HexoThree/" title="搭建个人博客(三)：Hexo-theme-pure个人博客中博文上传以及分类和标签的设定"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2020/06/13/HexoOne/" title="搭建个人博客(一)：Hexo本地的使用和配置"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/zhifubao12.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/weixin.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/w714860761" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://weibo.com/6212101714/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://user.qzone.qq.com/714860761" target="_blank" title="Qq" data-toggle=tooltip data-placement=top><i class="icon icon-qq"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '2Yg750Y1FethcYOdKsTXMxfW-gzGzoHsz',
+    appKey: 'hVQ2JtRkyPYfMGrUvATM9eCC',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
