@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-14T09:45:53.669Z</updated>
+  <updated>2020-07-20T12:37:52.721Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>搭建个人博客(四)：上传Hexo博客至github</title>
-    <link href="http://yoursite.com/2020/06/14/HexoFour/"/>
-    <id>http://yoursite.com/2020/06/14/HexoFour/</id>
-    <published>2020-06-13T16:00:00.000Z</published>
-    <updated>2020-06-14T09:45:53.669Z</updated>
+    <title>使用Powerdesigner自动生成sql语句</title>
+    <link href="http://yoursite.com/2020/07/20/powerDesigner/"/>
+    <id>http://yoursite.com/2020/07/20/powerDesigner/</id>
+    <published>2020-07-19T16:00:00.000Z</published>
+    <updated>2020-07-20T12:37:52.721Z</updated>
     
-    <content type="html"><![CDATA[<h5 id="看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的"><a href="#看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的" class="headerlink" title="看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的"></a>看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的</h5><p>我觉得这个方法应该是最简单的，hhh</p><p><strong>一、注册github账号</strong></p><p>github官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>注册账号，github进不去或访问慢的的自行百度方法<br><img src="https://img-blog.csdnimg.cn/20200614164131412.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>二、新建仓库</strong><br><img src="https://img-blog.csdnimg.cn/20200614163830614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>注意:</strong> 仓库的name必须是你的github用户名，这个后来就是你网站的域名，选择public<br>完成上述操作后点击创建仓库</p><p><strong>三、打开博客根目录下的_config.yml站点配置文件</strong></p><p>进入github创建好的仓库中拿到仓库的<strong>URL</strong><br>打开配置文件进行如下配置:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原配置文件的字段</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">''</span></span><br><span class="line"><span class="comment"># 修改后</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: <span class="comment"># 你的github仓库的URL地址</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p><strong>四、进行博客上传</strong></p><p>在博客文件夹下打开git bash命令行窗口输入如下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d <span class="comment"># 部署博客</span></span><br></pre></td></tr></table></figure><p>之后等待会提示输入github的账号和密码，输入后等待即可，完成后，在浏览器使用你的github用户名+github.io进行访问（这个是别人也可以访问到的地址哦！）<br><strong>例</strong>：wdadad.github.io</p><p><strong>注意:</strong> 如果密码和账号输入错误不会有相关提示，会部署失败，可以使用Ctrl+C 组合快捷键退出后重新部署</p><p><strong>Finish</strong></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>Powerdesigner：可用于数据库模型设计</strong></p><h4 id="第一步：进行数据库表的设计"><a href="#第一步：进行数据库表的设计" class="headerlink" title="第一步：进行数据库表的设计"></a>第一步：进行数据库表的设计</h4><p>使用Powerdesigner进行数据库模型设计的第一步是设计好数据库表的相关信息以及表和表之间的对应关系，以员工和员工类型为例</p><p><strong>员工类型表（type）:</strong><br>（主键）员工类型编号（t_id）<br>员工类型名称（t_name）<br><strong>员工表（employee）：</strong><br>（主键）员工编号（e_id）<br>员工姓名（e_name）<br>（外键）员工类型编号（t_id）</p><h4 id="第二步：使用Powerdesigner进行数据库模型设计"><a href="#第二步：使用Powerdesigner进行数据库模型设计" class="headerlink" title="第二步：使用Powerdesigner进行数据库模型设计"></a>第二步：使用Powerdesigner进行数据库模型设计</h4><p>1、打开Powerdesigner新建，文件-&gt;新建-&gt;ConceptualDataModel(概念模型)，如下图<br><img src="https://img-blog.csdnimg.cn/20200720170503228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>2、点击确定，可在右上角(不一定在右上角)看到如下图的工具栏<br><img src="https://img-blog.csdnimg.cn/20200720170716578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>3、下图中圈住的部分代表一个表的实体<br><img src="https://img-blog.csdnimg.cn/20200720170754967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>4、第一步中我们创建了两张表,点击该图标，放置2个实体在工作区域中，如下图<br><img src="https://img-blog.csdnimg.cn/20200720170932649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>5、点击第一个实体，General标签表示设置表的信息，Attributes标签表示设置表的属性信息<br><img src="https://img-blog.csdnimg.cn/20200720171126971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>6、选择General标签，修改表的信息，Name代表在Powerdesigner中显示的表的名称，一般设置中文，Code代表数据库中的表名，设定如下<br><img src="https://img-blog.csdnimg.cn/20200720171302142.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>6、选择Attributes标签，修改表的属性信息<br><img src="https://img-blog.csdnimg.cn/20200720171402474.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>6、Name代表在Powerdesigner中显示的表属性的名称，一般设置中文，Code代表数据库的表属性名称，DataType代表数据类型，Length代表类型长度，M：是否为空（选中表示不为空），P：是否为主键（选中表示主键），D：是否显示（选中表示显示），填入如下信息<br><img src="https://img-blog.csdnimg.cn/20200720171752645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>7、接着完成另一个表的信息设定（外键不需设定），如下图<br><img src="https://img-blog.csdnimg.cn/20200720172018367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>8、设定表之间的关系，下图中圈住的部分代表设定表和表之间的联系<br><img src="https://img-blog.csdnimg.cn/20200720172043236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>9、由于职工类型和职工是一对多的关系，选择上一步的组件设定表和表的关系（从一个表拖向一个表），如下图<br><img src="https://img-blog.csdnimg.cn/20200720172253447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>10、双击设定的关系，General标签可以设定关系的name，Cardinalities可以设定表一对一，一对多，多对多的关系，由于职工类型表和职工表是一对多的关系，故进行如下设定<br><img src="https://img-blog.csdnimg.cn/20200720172519983.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>10、点击确定，<strong>注意</strong>：<strong>在Powerdesigner表的一对多关系中，多的那一面代表的是产生外键约束的表</strong><br><img src="https://img-blog.csdnimg.cn/20200720172636681.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>11、概念模型生成物理模型，点击 工具-&gt;General Physical Data Model,如下图<br><img src="https://img-blog.csdnimg.cn/20200720172806619.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>12、DBMS中选择对应数据库，然后点击确定，如下图，成功生成物理模型，员工表产生外键约束<br><img src="https://img-blog.csdnimg.cn/20200720172903852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>13、点击 数据库-&gt;General DataBase ,自动生成数据库sql文件，可选择存储位置<br><img src="https://img-blog.csdnimg.cn/20200720173043259.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>13、打开生成的sql文件，如下图<br><img src="https://img-blog.csdnimg.cn/20200720173150929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>至此，使用Powerdesigner自动生成sql语句完成！</p><p><strong>Finish</strong></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h5 id=&quot;看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的&quot;&gt;&lt;a href=&quot;#看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的&quot; class=&quot;headerlink&quot; title=&quot;看了很多的Hexo博客上传至
+        &lt;p&gt;&lt;strong&gt;Powerdesigner：可用于数据库模型设计&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;第一步：进行数据库表的设计&quot;&gt;&lt;a href=&quot;#第一步：进行数据库表的设计&quot; class=&quot;headerlink&quot; title=&quot;第一步：进行数据库表的设计&quot;&gt;&lt;/
       
     
     </summary>
@@ -38,7 +39,33 @@
       <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+      <category term="数据库" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>eclipse中导入idea项目的基本步骤</title>
+    <link href="http://yoursite.com/2020/07/11/eclipseToIdea/"/>
+    <id>http://yoursite.com/2020/07/11/eclipseToIdea/</id>
+    <published>2020-07-10T16:00:00.000Z</published>
+    <updated>2020-07-20T12:35:59.429Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="eclipse导入idea项目"><a href="#eclipse导入idea项目" class="headerlink" title="eclipse导入idea项目"></a>eclipse导入idea项目</h2><p>前段时间有个idea项目(SSM+maven)需要导入eclispe运行，最后搞了很久才运行成功，这里整理一下导入项目时需要修改一些配置</p><h4 id="第一步，import时建议选择导入Maven项目"><a href="#第一步，import时建议选择导入Maven项目" class="headerlink" title="第一步，import时建议选择导入Maven项目"></a>第一步，import时建议选择导入Maven项目</h4><p>选择Maven下的导入Maven项目<br><img src="https://img-blog.csdnimg.cn/20200711215208906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下一步后选择需导入的项目点击finish<br><img src="https://img-blog.csdnimg.cn/20200711215414978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>导入后<br><img src="https://img-blog.csdnimg.cn/20200711215806812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h4 id="第二步，配置eclipse工作空间的Maven及Tomcat运行环境"><a href="#第二步，配置eclipse工作空间的Maven及Tomcat运行环境" class="headerlink" title="第二步，配置eclipse工作空间的Maven及Tomcat运行环境"></a>第二步，配置eclipse工作空间的Maven及Tomcat运行环境</h4><p>点击Window菜单下的Preferences选项<br><img src="https://img-blog.csdnimg.cn/20200711215909335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开后如下图<br><img src="https://img-blog.csdnimg.cn/20200711220153759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>找到maven下的User Setting的选项<br><img src="https://img-blog.csdnimg.cn/20200711220342111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择Maven的配置文件，会自动识别本地仓库的地址，完成后点击Apply<br><img src="https://img-blog.csdnimg.cn/20200711220537377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>同理找到Server下的RunTime选项配置Tomcat<br><img src="https://img-blog.csdnimg.cn/20200711220752290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>配置后如下：<br><img src="https://img-blog.csdnimg.cn/20200711220809678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>最后右键项目更新Maven后，如下，基本错误消除<br><img src="https://img-blog.csdnimg.cn/20200711221140103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h4 id="第三步，配置项目的相关部分"><a href="#第三步，配置项目的相关部分" class="headerlink" title="第三步，配置项目的相关部分"></a>第三步，配置项目的相关部分</h4><p>右击项目选择最后一项Properties,如下<br><img src="https://img-blog.csdnimg.cn/20200711221353829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择Java Build Path,添加进相关的Maven依赖<br><img src="https://img-blog.csdnimg.cn/20200711222143466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择Web Project Setting,设置请求接口的路径（Idea中默认是/，但在eclipse中默认是项目名称）<br><img src="https://img-blog.csdnimg.cn/20200711222445308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>至此导入项目的基本配置就完成了，如果项目还有错误，需要就相关错误进行解决！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;eclipse导入idea项目&quot;&gt;&lt;a href=&quot;#eclipse导入idea项目&quot; class=&quot;headerlink&quot; title=&quot;eclipse导入idea项目&quot;&gt;&lt;/a&gt;eclipse导入idea项目&lt;/h2&gt;&lt;p&gt;前段时间有个idea项目(SSM+m
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -65,6 +92,32 @@
     
     
       <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建个人博客(四)：上传Hexo博客至github</title>
+    <link href="http://yoursite.com/2020/06/14/HexoFour/"/>
+    <id>http://yoursite.com/2020/06/14/HexoFour/</id>
+    <published>2020-06-13T16:00:00.000Z</published>
+    <updated>2020-06-14T09:45:53.669Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的"><a href="#看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的" class="headerlink" title="看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的"></a>看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的</h5><p>我觉得这个方法应该是最简单的，hhh</p><p><strong>一、注册github账号</strong></p><p>github官网：<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>注册账号，github进不去或访问慢的的自行百度方法<br><img src="https://img-blog.csdnimg.cn/20200614164131412.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><strong>二、新建仓库</strong><br><img src="https://img-blog.csdnimg.cn/20200614163830614.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>注意:</strong> 仓库的name必须是你的github用户名，这个后来就是你网站的域名，选择public<br>完成上述操作后点击创建仓库</p><p><strong>三、打开博客根目录下的_config.yml站点配置文件</strong></p><p>进入github创建好的仓库中拿到仓库的<strong>URL</strong><br>打开配置文件进行如下配置:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原配置文件的字段</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">''</span></span><br><span class="line"><span class="comment"># 修改后</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: <span class="comment"># 你的github仓库的URL地址</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p><strong>四、进行博客上传</strong></p><p>在博客文件夹下打开git bash命令行窗口输入如下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d <span class="comment"># 部署博客</span></span><br></pre></td></tr></table></figure><p>之后等待会提示输入github的账号和密码，输入后等待即可，完成后，在浏览器使用你的github用户名+github.io进行访问（这个是别人也可以访问到的地址哦！）<br><strong>例</strong>：wdadad.github.io</p><p><strong>注意:</strong> 如果密码和账号输入错误不会有相关提示，会部署失败，可以使用Ctrl+C 组合快捷键退出后重新部署</p><p><strong>Finish</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的&quot;&gt;&lt;a href=&quot;#看了很多的Hexo博客上传至github都有出入，这里说下我的方式，上传成功的&quot; class=&quot;headerlink&quot; title=&quot;看了很多的Hexo博客上传至
+      
+    
+    </summary>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   

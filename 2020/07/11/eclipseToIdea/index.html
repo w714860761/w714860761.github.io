@@ -17,23 +17,35 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Spring配置:自动扫描 | 溯</title>
-  <meta name="description" content="Spring配置:自动扫描一、在Spring的配置文件applicationContext.xml头部,引入context命名空间:xmlns:context&#x3D;”http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context&quot;xsi:schemaLocation&#x3D;”http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;contexthtt">
+  <title>eclipse中导入idea项目的基本步骤 | 溯</title>
+  <meta name="description" content="eclipse导入idea项目前段时间有个idea项目(SSM+maven)需要导入eclispe运行，最后搞了很久才运行成功，这里整理一下导入项目时需要修改一些配置 第一步，import时建议选择导入Maven项目选择Maven下的导入Maven项目下一步后选择需导入的项目点击finish导入后 第二步，配置eclipse工作空间的Maven及Tomcat运行环境点击Window菜单下的Pref">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring配置:自动扫描">
-<meta property="og:url" content="http://yoursite.com/2020/05/22/SpringAutomaticScanning/index.html">
+<meta property="og:title" content="eclipse中导入idea项目的基本步骤">
+<meta property="og:url" content="http://yoursite.com/2020/07/11/eclipseToIdea/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Spring配置:自动扫描一、在Spring的配置文件applicationContext.xml头部,引入context命名空间:xmlns:context&#x3D;”http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;context&quot;xsi:schemaLocation&#x3D;”http:&#x2F;&#x2F;www.springframework.org&#x2F;schema&#x2F;contexthtt">
+<meta property="og:description" content="eclipse导入idea项目前段时间有个idea项目(SSM+maven)需要导入eclispe运行，最后搞了很久才运行成功，这里整理一下导入项目时需要修改一些配置 第一步，import时建议选择导入Maven项目选择Maven下的导入Maven项目下一步后选择需导入的项目点击finish导入后 第二步，配置eclipse工作空间的Maven及Tomcat运行环境点击Window菜单下的Pref">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200522193519842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-05-21T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-06-14T09:43:29.683Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711215208906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711215414978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711215806812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711215909335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711220153759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711220342111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711220537377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711220752290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711220809678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711221140103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711221353829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711222143466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200711222445308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-07-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-20T12:35:59.429Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Spring">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200522193519842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200711215208906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2020/05/22/SpringAutomaticScanning/index.html">
+  <link rel="canonical" href="http://yoursite.com/2020/07/11/eclipseToIdea/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -328,14 +340,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-SpringAutomaticScanning" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-eclipseToIdea" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Spring配置:自动扫描
+      eclipse中导入idea项目的基本步骤
     </h1>
   
 
@@ -343,20 +355,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2020/05/22/SpringAutomaticScanning/" class="article-date">
-	  <time datetime="2020-05-21T16:00:00.000Z" itemprop="datePublished">2020-05-22</time>
+	<a href="/2020/07/11/eclipseToIdea/" class="article-date">
+	  <time datetime="2020-07-10T16:00:00.000Z" itemprop="datePublished">2020-07-11</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+    <a class="article-category-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/Spring/" rel="tag">Spring</a>
+	<a class="article-tag-link" href="/tags/Java/" rel="tag">Java</a>
   </span>
 
 
@@ -369,10 +381,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/05/22/SpringAutomaticScanning/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2020/07/11/eclipseToIdea/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 97(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 288(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -382,8 +394,10 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h1 id="Spring配置-自动扫描"><a href="#Spring配置-自动扫描" class="headerlink" title="Spring配置:自动扫描"></a>Spring配置:自动扫描</h1><h5 id="一、在Spring的配置文件applicationContext-xml头部-引入context命名空间"><a href="#一、在Spring的配置文件applicationContext-xml头部-引入context命名空间" class="headerlink" title="一、在Spring的配置文件applicationContext.xml头部,引入context命名空间:"></a>一、在Spring的配置文件applicationContext.xml头部,引入context命名空间:</h5><p>xmlns:context=”<a href="http://www.springframework.org/schema/context&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/context&quot;</a><br>xsi:schemaLocation=”<a href="http://www.springframework.org/schema/context" target="_blank" rel="noopener">http://www.springframework.org/schema/context</a><br><a href="http://www.springframework.org/schema/context/spring-context.xsd&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/context/spring-context.xsd&quot;</a></p>
-<h5 id="二、在配置文件中添加配置扫描所在包下-下图中为扫描com包-所有注解"><a href="#二、在配置文件中添加配置扫描所在包下-下图中为扫描com包-所有注解" class="headerlink" title="二、在配置文件中添加配置扫描所在包下(下图中为扫描com包)所有注解:"></a>二、在配置文件中添加配置扫描所在包下(下图中为扫描com包)所有注解:</h5><p> &lt;context:component-scan base-package=”com”/&gt;<br> 如下图:<br><img src="https://img-blog.csdnimg.cn/20200522193519842.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>至此,配置成功!</p>
+        <h2 id="eclipse导入idea项目"><a href="#eclipse导入idea项目" class="headerlink" title="eclipse导入idea项目"></a>eclipse导入idea项目</h2><p>前段时间有个idea项目(SSM+maven)需要导入eclispe运行，最后搞了很久才运行成功，这里整理一下导入项目时需要修改一些配置</p>
+<h4 id="第一步，import时建议选择导入Maven项目"><a href="#第一步，import时建议选择导入Maven项目" class="headerlink" title="第一步，import时建议选择导入Maven项目"></a>第一步，import时建议选择导入Maven项目</h4><p>选择Maven下的导入Maven项目<br><img src="https://img-blog.csdnimg.cn/20200711215208906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>下一步后选择需导入的项目点击finish<br><img src="https://img-blog.csdnimg.cn/20200711215414978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>导入后<br><img src="https://img-blog.csdnimg.cn/20200711215806812.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="第二步，配置eclipse工作空间的Maven及Tomcat运行环境"><a href="#第二步，配置eclipse工作空间的Maven及Tomcat运行环境" class="headerlink" title="第二步，配置eclipse工作空间的Maven及Tomcat运行环境"></a>第二步，配置eclipse工作空间的Maven及Tomcat运行环境</h4><p>点击Window菜单下的Preferences选项<br><img src="https://img-blog.csdnimg.cn/20200711215909335.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>打开后如下图<br><img src="https://img-blog.csdnimg.cn/20200711220153759.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>找到maven下的User Setting的选项<br><img src="https://img-blog.csdnimg.cn/20200711220342111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择Maven的配置文件，会自动识别本地仓库的地址，完成后点击Apply<br><img src="https://img-blog.csdnimg.cn/20200711220537377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>同理找到Server下的RunTime选项配置Tomcat<br><img src="https://img-blog.csdnimg.cn/20200711220752290.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>配置后如下：<br><img src="https://img-blog.csdnimg.cn/20200711220809678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>最后右键项目更新Maven后，如下，基本错误消除<br><img src="https://img-blog.csdnimg.cn/20200711221140103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h4 id="第三步，配置项目的相关部分"><a href="#第三步，配置项目的相关部分" class="headerlink" title="第三步，配置项目的相关部分"></a>第三步，配置项目的相关部分</h4><p>右击项目选择最后一项Properties,如下<br><img src="https://img-blog.csdnimg.cn/20200711221353829.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择Java Build Path,添加进相关的Maven依赖<br><img src="https://img-blog.csdnimg.cn/20200711222143466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>选择Web Project Setting,设置请求接口的路径（Idea中默认是/，但在eclipse中默认是项目名称）<br><img src="https://img-blog.csdnimg.cn/20200711222445308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyOTgzNTAy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>至此导入项目的基本配置就完成了，如果项目还有错误，需要就相关错误进行解决！</p>
 
       
     </div>
@@ -393,7 +407,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2020/05/22/SpringAutomaticScanning/" title="Spring配置:自动扫描" target="_blank" rel="external">http://yoursite.com/2020/05/22/SpringAutomaticScanning/</a>
+      <a href="http://yoursite.com/2020/07/11/eclipseToIdea/" title="eclipse中导入idea项目的基本步骤" target="_blank" rel="external">http://yoursite.com/2020/07/11/eclipseToIdea/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -440,12 +454,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2020/06/01/SpringJDBCSecondaryPackaging/" title="对Spring的JDBC框架再封装——提高效率"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2020/07/20/powerDesigner/" title="使用Powerdesigner自动生成sql语句"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2020/04/15/JavaSEStudyFour/" title="JavaSE学习笔记(四):String类"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2020/06/14/GithubSlow/" title="使用gitee导入github项目，解决github下载速度缓慢"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
